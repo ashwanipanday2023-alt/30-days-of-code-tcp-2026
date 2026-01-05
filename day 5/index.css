@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: #175594;
+}
+
+h1 {
+  margin-top: 60px;
+  color: #a5750b;
+}
+
+/* Board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  gap: 10px;
+  margin: 30px auto;
+  width: max-content;
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  background: rgb(84, 126, 190);
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.cell:hover {
+  background: #e8eef3;
+  transform: scale(1.05);
+}
+
+/* SVG animation */
+svg {
+  width: 70px;
+  height: 70px;
+  stroke-width: 8;
+  stroke-linecap: round;
+  fill: none;
+  animation: draw 0.4s ease forwards;
+}
+
+.x {
+  stroke: #ff5252;
+}
+
+.o {
+  stroke: #4caf50;
+}
+
+@keyframes draw {
+  from {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Win animation */
+.win .cell {
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+}
