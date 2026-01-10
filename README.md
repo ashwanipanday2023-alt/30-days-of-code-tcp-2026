@@ -11,3 +11,5 @@ DAY 8
 DAY 9
 
 <img width="1893" height="1032" alt="Image" src="https://github.com/user-attachments/assets/4c403d7c-d4e6-4ca0-b2c8-104c97b24c84" />
+DAY 10
+<img width="1892" height="1035" alt="Image" src="https://github.com/user-attachments/assets/9d748ce0-bcd8-4452-a97d-ef1ed91388ea" />
